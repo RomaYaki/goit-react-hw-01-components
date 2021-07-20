@@ -11,7 +11,13 @@ import transactions from "../TransactionHistory/transactions.json";
 
 const App = () => (
   <>
-    <Profile user={user} />
+    <Profile
+      name={user.name}
+      tag={user.tag}
+      location={user.location}
+      avatar={user.avatar}
+      stats={user.stats}
+    />
     <Statistics title="File upload" stats={statisticalData} />
     <FriendList friends={friends} />
     <TransactionHistory items={transactions} />

@@ -2,21 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import st from "./Statistics.module.css";
 
-// function randColor() {
-//   const r = Math.floor(Math.random() * 256);
-//   const g = Math.floor(Math.random() * 256);
-//   const b = Math.floor(Math.random() * 256);
-//   const rgba = '#' + r.toString(16) + g.toString(16) + b.toString(16);
-//   return rgba;
-// }
-
 function randColor() {
   return "#" + Math.floor(Math.random() * 16777215).toString(16);
 }
 
 const Statistics = ({ title, stats }) => (
   <section className={st.statistics}>
-    {title !== "" && <h2 className={st.title}>{title}</h2>}
+    {title && <h2 className={st.title}>{title}</h2>}
 
     <ul className={st.statList}>
       {stats.map((el) => (

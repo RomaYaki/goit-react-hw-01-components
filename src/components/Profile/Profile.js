@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import s from "./Profile.module.css";
 
-const Profile = ({ user }) => (
+const Profile = (user) => (
   <div className={s.profile}>
     <div className={s.description}>
       <img src={user.avatar} alt="user avatar" className={s.avatar} />
